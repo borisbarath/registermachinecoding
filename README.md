@@ -21,13 +21,13 @@ With this in mind, we can move onto encoding lists. Let l be a list and enc(l) d
 
 Register machine instructions
 - There are three types of register machine instructions:
-1. Rx (+) -> Ry
+1. Ri (+) -> Rj
 2. Ri (-) -> Rj, Rk
 3. HALT
 
 They are encoded as follows:
-1. `⟨⟨ x, y ⟩⟩`
-2. `⟨⟨ i, ⟨ j, k ⟩ ⟩⟩`
+1. `⟨⟨ 2 * i, j ⟩⟩`
+2. `⟨⟨ 2 * i + 1, ⟨ j, k ⟩ ⟩⟩`
 3. `0`
     
 - To encode a register machine R with instructions I1 ... In:
